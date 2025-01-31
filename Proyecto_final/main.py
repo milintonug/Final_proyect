@@ -83,7 +83,10 @@ def add_todo():
     db.session.commit()
     return redirect(url_for('index'))
 
-
+@app.route('/edit')
+@login_required
+def edit():
+    return render_template('edit.html')
 
 
 
